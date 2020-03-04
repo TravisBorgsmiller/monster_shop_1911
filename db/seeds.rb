@@ -72,6 +72,46 @@ merchant_user2 = bee_shop.users.create!(name: "Jeremiah",
   role: 1
 )
 
+merchant_user3 = bee_shop.users.create!(name: "Jeremiah",
+  street_address: "7777 Rastafari Way",
+  city: "Jamaica",
+  state: 'FL',
+  zip_code: 46766,
+  email: "merchant3@example.com",
+  password: "merchant3",
+  role: 1
+)
+
+merchant_user4 = fly_shop.users.create!(name: "Jeremiah",
+  street_address: "7777 Rastafari Way",
+  city: "Jamaica",
+  state: 'FL',
+  zip_code: 46766,
+  email: "merchant4@example.com",
+  password: "merchant4",
+  role: 1
+)
+
+merchant_user5 = music_shop.users.create!(name: "Jeremiah",
+  street_address: "7777 Rastafari Way",
+  city: "Jamaica",
+  state: 'FL',
+  zip_code: 46766,
+  email: "merchant5@example.com",
+  password: "merchant5",
+  role: 1
+)
+
+merchant_user6 = plant_shop.users.create!(name: "Jeremiah",
+  street_address: "7777 Rastafari Way",
+  city: "Jamaica",
+  state: 'FL',
+  zip_code: 46766,
+  email: "merchant6@example.com",
+  password: "merchant6",
+  role: 1
+)
+
 admin_user = User.create!(name: "Johnny",
   street_address: "123 Jonny Way",
   city: "Johnsonville",
@@ -94,3 +134,8 @@ default_user = User.create!(name: "Johnny",
 #coupons
 ski_shop.coupons.create(name: 'trav coupon1', value: 10, item_quantity: 1)
 ski_shop.coupons.create(name: 'trav coupon2', value: 20, item_quantity: 2)
+fly_shop.coupons.create(name: 'coupon 3', value: 15, item_quantity: 4)
+music_shop.coupons.create(name: 'coupon 4', value: 30, item_quantity: 3)
+plant_shop.coupons.create(name: 'coupon 5', value: 40, item_quantity: 5)
+bee_shop.coupons.create(name: 'coupon 6', value: 35, item_quantity: 2)
+bee_shop.coupons.create(name: 'coupon 7', value: 50, item_quantity: 5)
