@@ -3,8 +3,8 @@ class Merchant::CouponsController < Merchant::BaseController
     @coupon = Coupon.new
   end
   def index
-    @coupons = Coupon.all
-    @merchant = current_user.merchant
+    @merchant = Merchant.find(current_user.merchant_id)
+    @coupons = @merchant.coupons
   end
   def show
     @coupon = Coupon.find(params[:id])

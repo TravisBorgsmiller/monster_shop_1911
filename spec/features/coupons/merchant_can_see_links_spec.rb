@@ -76,8 +76,8 @@ RSpec.describe 'Merchant can see links to CRUD coupons' do
     end
     it 'will only delete coupon if not used on an order' do
       mike = Merchant.create(name: "Mike's Print Shop", address: '123 Paper Rd.', city: 'Denver', state: 'CO', zip: 80203)
-      pencil = mike.items.create(name: "Yellow Pencil", description: "You can write on paper with it!", price: 2, image: "https://images-na.ssl-images-amazon.com/images/I/31BlVr01izL._SX425_.jpg", inventory: 100)
-      coupon2 = mike.coupons.create(name:'mike test coupon', value: 20, item_quantity: 2)
+      pencil = @merchant.items.create(name: "Yellow Pencil", description: "You can write on paper with it!", price: 2, image: "https://images-na.ssl-images-amazon.com/images/I/31BlVr01izL._SX425_.jpg", inventory: 100)
+      coupon2 = @merchant.coupons.create(name:'mike test coupon', value: 20, item_quantity: 2)
       visit "/items"
 
       click_on "Register"
