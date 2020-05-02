@@ -2,19 +2,10 @@
 
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :merchants
 
-  get '/merchants', to: 'merchants#index'
-  get '/merchants/new', to: 'merchants#new'
-  get '/merchants/:id', to: 'merchants#show'
-  post '/merchants', to: 'merchants#create'
-  get '/merchants/:id/edit', to: 'merchants#edit'
-  patch '/merchants/:id', to: 'merchants#update'
-  delete '/merchants/:id', to: 'merchants#destroy'
+  resources :items, only: [:index, :show, :edit, :update]
 
-  get '/items', to: 'items#index'
-  get '/items/:id', to: 'items#show'
-  get '/items/:id/edit', to: 'items#edit'
-  patch '/items/:id', to: 'items#update'
   get '/merchants/:merchant_id/items', to: 'merchant_items#index'
 
   get '/merchants/:merchant_id/items/new', to: 'items#new'
@@ -82,6 +73,5 @@ Rails.application.routes.draw do
   patch '/user/password/update', to: 'users_password#update'
 
   get '/profile/orders', to: 'orders#index'
-
 
 end
